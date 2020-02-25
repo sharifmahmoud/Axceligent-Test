@@ -16,6 +16,7 @@ export function Car(){
     return "lamborghini";
 }
 
+
 answers true for type 2 {{ import Car from "app.js"; }} are :
 
 answer 2
