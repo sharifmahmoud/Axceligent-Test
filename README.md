@@ -36,5 +36,49 @@ function Car(){
 }
 export default Car;
 
+----------------------------------------------------
+# Question 8 
+function operatorFactory(operator: (result: number) => number) {
+  return (
+    target: Object,
+    propertyName: string,
+    propertyDescriptor: PropertyDescriptor,
+  ) => {
+    const method = propertyDescriptor.value;
+
+    propertyDescriptor.value = function (...args: any[]) {
+
+      const result = method.apply(this, args); // Call original function
+
+      return operator(result); // Call operator
+    }
+
+    return propertyDescriptor;
+  } 
+}
+
+ function subtract(subtrahend: number = 1) {
+  return operatorFactory((num: number) => {
+    return num - subtrahend;
+  });
+};
+
+ function multiply(factors: number = 1) {
+  return operatorFactory((num: number) => {
+    return num * factors;
+  });
+}
+
+class MathClass{
+
+  
+    @subtract(1)
+    @multiply(2)
+    addOne(number:number) {
+       return number+1;
+   }
+}
+ 
+console.log(new MathClass().addOne(2)) //should print 5
 
 
