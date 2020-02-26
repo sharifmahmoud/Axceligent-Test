@@ -1,11 +1,11 @@
 # Axceligent-Test
 
-Question #5 Method Signature 
+# Question #5 Method Signature 
 
 async Task<KeyValuePair<double, int>> SomeCalculation(long, int, bool);
 
 -----------------------------------------------------------------------------
-Question #7 ES6 Import
+# Question #7 ES6 Import
 
 answers true for type 1 {{ import {Car} from "app.js"; }} are :
 
