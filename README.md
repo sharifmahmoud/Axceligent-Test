@@ -2,7 +2,8 @@
 
 # Question #5 Method Signature 
 
-async Task<KeyValuePair<double, int>> SomeCalculation(long, int, bool);
+``` async Task<KeyValuePair<double, int>> SomeCalculation(long, int, bool);
+```
 
 -----------------------------------------------------------------------------
 # Question #7 ES6 Import
@@ -24,7 +25,8 @@ answers true for type 2 {{ import Car from "app.js"; }} are :
 //app.js
 export default function Car(){
     return "lamborghini";
-}```
+}
+```
 
 **answer 4
 ``` //app.js
