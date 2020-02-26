@@ -38,7 +38,8 @@ export default Car;
 
 ----------------------------------------------------
 # Question 8 
-{ function operatorFactory(operator: (result: number) => number) {
+ ``` typescript
+ function operatorFactory(operator: (result: number) => number) {
   return (
     target: Object,
     propertyName: string,
@@ -80,5 +81,4 @@ class MathClass{
 }
  
 console.log(new MathClass().addOne(2)) //should print 5
-
-}
+```
