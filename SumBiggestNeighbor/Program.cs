@@ -8,6 +8,7 @@ namespace SumBiggestNeighbor
 {
     class Program
     {
+        //complexity is O(n)
         static int Challenge(int[] input)
         {
 
