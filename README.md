@@ -2,7 +2,8 @@
 
 # Question #5 Method Signature 
 
-``` async Task<KeyValuePair<double, int>> SomeCalculation(long, int, bool);
+``` c#
+async Task<KeyValuePair<double, int>> SomeCalculation(long, int, bool);
 ```
 
 -----------------------------------------------------------------------------
