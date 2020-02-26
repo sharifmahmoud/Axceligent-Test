@@ -11,31 +11,28 @@ answers true for type 1 {{ import {Car} from "app.js"; }} are :
 
 **answer 1
 
-//app.js
-
+```//app.js
 export function Car(){
     return "lamborghini";
 }
-
+```
 ------------------------------------------------------------------
 answers true for type 2 {{ import Car from "app.js"; }} are :
 
 **answer 2
-
+```
 //app.js
-
 export default function Car(){
     return "lamborghini";
-}
+}```
 
 **answer 4
-
-//app.js
+``` //app.js
 function Car(){
     return "lamborghini";
 }
 export default Car;
-
+```
 ----------------------------------------------------
 # Question 8 
  ``` typescript
