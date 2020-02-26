@@ -26,9 +26,5 @@ namespace Alexa
 
            
         }
-
-        public async Task<KeyValuePair<double, int>> SomeCalculation(long a, int b, bool c);
-        public async Tuple<double, int> SomeCalculation(long a, int b, bool c);
-
     }
 }
