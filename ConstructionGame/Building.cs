@@ -6,50 +6,48 @@ using System.Threading.Tasks;
 
 namespace ConstructionGame
 {
-    public class Room
+    public class BuldingPart
     {
-        public string Title { get; set; }
-        public Room(string title) { this.Title = title; }
-    }
-    public class Building
-    {
-        private static List<Room> BuldingParts = null;
-        public Building()
-        {
-            BuldingParts = new List<Room>();
-        }
-        public Building Build()
-        {
-            return this;
-        }
+        public List<string> Parts = new List<String>();
 
         public string Describe()
         {
-            return string.Join(", ", BuldingParts.Select(a => a.Title));
+            return string.Join(", ", Parts);
         }
+    }
+    public class Building
+    {
+        private BuldingPart part;
 
+        public Building()
+        {
+            part = new BuldingPart();
+        }
 
         public Building AddKitchen()
         {
-            BuldingParts.Add(new Room("Kitchen"));
+            part.Parts.Add("Kitchen");
             return this;
         }
 
         public Building AddBedroom(string title = "")
         {
             if (string.IsNullOrEmpty(title))
-                BuldingParts.Add(new Room("Bedroom"));
+                part.Parts.Add("Bedroom");
             else
-                BuldingParts.Add(new Room($"{title} room"));
+                part.Parts.Add($"{title} room");
             return this;
         }
 
         public Building AddBalcony()
         {
-            BuldingParts.Add(new Room("Balcony"));
+            part.Parts.Add("Balcony");
             return this;
         }
-
+        public BuldingPart Build()
+        {
+            return part;
+        }
 
     }
 }
